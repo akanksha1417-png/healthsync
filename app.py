@@ -550,17 +550,6 @@ def health_summary():
 
 with app.app_context():
     db.create_all()
-# ... your model classes (User, etc.) are above here ...
-    blood_group = db.Column(db.String(20))
-
-# ADD IT HERE (after all models, before @app.route):
-with app.app_context():
-    db.create_all()
-
-@app.route("/")
-def index():
-    # ...
-
 
 if __name__ == "__main__":
     app.run(debug=True)
